@@ -23,7 +23,7 @@ function Listing() {
 
     // FORMA CERTA = SÓ EXECUTA UMA VEZ O COMANDO GET
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
         .then(response => {
             const data = response.data as MoviePage;
             setPage(data);  
